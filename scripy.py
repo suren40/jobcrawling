@@ -6,7 +6,8 @@ Job post crawling
 import requests
 from lxml import html
 import csv
-URL = "https://www.simplyhired.com/search?q=cyber+security&l=united+states&fdb=7&fbclid=IwAR0_AFM-8RsbeLqVHLkUfGmEoKP7_kzw2WmJVBi0CdGWqUb4VfgbEPUZCG8&job=0v7ZQUn-4Z2LnAaoPsXb9qe7bgub9FHfBd0xHRdQyf9kQE-ZrdHGIQ"
+URL = "https://www.simplyhired.com/search?q=cyber+security&l=united+states&fdb=7&pn=1&job=Ow5axgzXcn9KVaL0_HUmPQ_8MKBWl1K19Y_oEcqDIFRqydsktAkaIw"
+#URL = "https://www.simplyhired.com/search?q=cyber+security&l=united+states&fdb=7&fbclid=IwAR0_AFM-8RsbeLqVHLkUfGmEoKP7_kzw2WmJVBi0CdGWqUb4VfgbEPUZCG8&job=0v7ZQUn-4Z2LnAaoPsXb9qe7bgub9FHfBd0xHRdQyf9kQE-ZrdHGIQ"
 respond = requests.get(URL)
 PAGE = html.fromstring(respond.content)
 rows = PAGE.xpath('//div[@class="card js-job"]')
